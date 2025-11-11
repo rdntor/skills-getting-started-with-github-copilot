@@ -1,2 +1,8 @@
+```pip-requirements
 fastapi
 uvicorn
+pytest
+requests
+httpx
+
+```

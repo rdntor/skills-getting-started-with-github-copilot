@@ -151,7 +151,9 @@ footer {
 
 .participants-list {
   list-style: none;
-  padding: 8px 0 0 0;
+  list-style-type: none;
+  padding: 8px 0 0 0; /* ensure no top padding */
+  padding-left: 0; /* ensure no bullets / indent */
   margin: 8px 0 0 0;
   display: flex;
   flex-direction: column;
@@ -190,6 +192,25 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* Delete/unregister button next to each participant */
+.participant-delete {
+  margin-left: auto; /* push to far right inside the flex list item */
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.participant-delete:hover,
+.participant-delete:focus {
+  background: rgba(198, 40, 40, 0.06);
+  outline: none;
 }
 
 /* subtle fallback text when there are no participants */
